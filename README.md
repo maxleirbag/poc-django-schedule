@@ -1,4 +1,4 @@
-# django-admin
+# django-schedule
 
 ## Current screenshots of the project:
 
