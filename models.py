@@ -1,10 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # Create your models here.
 
 class Event(models.Model):
-    title =  models.CharField(max_length=100)
-    description = models.TextField(blank = True, null = True)
+    title = models.CharField(max_length=100)
+    description = models.TextField(blank=True, null=True)
     event_date = models.DateTimeField()
     creation_date = models.DateTimeField(auto_now=True)
     users = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -14,3 +16,6 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_event_date(self):
+        return self.event_date.strftime('%H:%M, %d/%m/%Y')
