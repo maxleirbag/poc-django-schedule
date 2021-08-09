@@ -1,5 +1,4 @@
 """agenda URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -19,6 +18,6 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/<name>/<int:age>', views.hello),
-    path('', views.hello)
+    path('hello/<name>/<int:age>', views.hello_custom),
+    path('', views.hello_generic)
 ]
